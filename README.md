@@ -6,9 +6,6 @@ Service for booking and ordering hotel rooms.
 ##### Key features:
 
 
-##### Example app features:
-
-
 ##### Technical requirements:
 
 
