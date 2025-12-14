@@ -4,7 +4,8 @@
 Service for booking and ordering hotel rooms.
 
 ##### Key features:
-
+Admin - add new bookings, update, and delete.
+User - select a booking, cancel, and view available bookings.
 
 ##### Technical requirements:
 
