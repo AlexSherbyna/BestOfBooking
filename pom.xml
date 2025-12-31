@@ -21,13 +21,13 @@
 		<java.version>21</java.version>
 
 		<!-- Spring specific -->
-		<spring.data.jpa> 4.0.0</spring.data.jpa>
-		<spring.security>4.0.0</spring.security>
-		<spring.starter.web>4.0.0</spring.starter.web>
+		<spring.data.jpa.version> 4.0.0</spring.data.jpa.version>
+		<spring.security.version>4.0.0</spring.security.version>
+		<spring.starter.web.version>4.0.0</spring.starter.web.version>
 
 		<!-- Other plugins versions -->
-		<postgresql>42.7.8</postgresql>
-		<lombok>1.18.42</lombok>
+		<postgresql.version>42.7.8</postgresql.version>
+		<lombok.version>1.18.42</lombok.version>
 
 	</properties>
 	<dependencies>
@@ -36,29 +36,29 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<version>${spring.data.jpa}</version>
+			<version>${spring.data.jpa.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-			<version>${spring.security}</version>
+			<version>${spring.security.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>${spring.starter.web}</version>
+			<version>${spring.starter.web.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>${postgresql}</version>
+			<version>${postgresql.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>${lombok}</version>
+			<version>${lombok.version}</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
