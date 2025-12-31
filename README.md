@@ -4,11 +4,20 @@
 Service for booking and ordering hotel rooms.
 
 ##### Key features:
-Admin - add new bookings, update, and delete.
-User - select a booking, cancel, and view available bookings.
+Add new bookings
+Update booking
+Delete booking
+List hotels
+Select date and time to booking
+Payment
+Сonfirmation message
+Cancel booking
+Show history all booking
+
 
 ##### Technical requirements:
-
+Platform independent (Docker)
+Should be able to handle 10-100k user per minute
 
 ##### Stack: 
 ![Static Badge](https://img.shields.io/badge/Java-21-brightgreen)
