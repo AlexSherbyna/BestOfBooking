@@ -23,5 +23,6 @@ Should be able to handle 10-100k user per minute
 ![Static Badge](https://img.shields.io/badge/Java-21-brightgreen)
 ![Static Badge](https://img.shields.io/badge/Spring%20Boot-4.0.0-brightgreen)
 ![Static Badge](https://img.shields.io/badge/Maven-4.0.0-brightgreen)
+![Static Badge](https://img.shields.io/badge/Docker-4.6.0-brightgreen)
 
 
