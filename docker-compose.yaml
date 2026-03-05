@@ -1,21 +1,6 @@
 #version: '3.8'
 
 services:
-  app:
-    build:
-      context: ./src
-      dockerfile: Dockerfile
-    container_name: ContainerBOB
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
-    environment:
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_NAME: databaseBOB
-      DB_USER: userBOB
-      DB_PASSWORD: password
 
   db:
     image: postgres:15
