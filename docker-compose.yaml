@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: ContainerBOB
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: databaseBOB
+      DB_USER: userBOB
+      DB_PASSWORD: password
+
+  db:
+    image: postgres:15
+    container_name: my_postgres_15
+    restart: always
+    environment:
+      POSTGRES_DB: databaseBOB
+      POSTGRES_USER: userBOB
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
