@@ -7,9 +7,10 @@ services:
     container_name: my_postgres_15
     restart: always
     environment:
-      POSTGRES_DB: databaseBOB
-      POSTGRES_USER: userBOB
-      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
     ports:
       - "5432:5432"
     volumes:
