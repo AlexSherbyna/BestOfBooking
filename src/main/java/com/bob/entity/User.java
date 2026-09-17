@@ -1,35 +1,37 @@
-package Entity;
+package com.bob.entity;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="user")
 public class User {
 
     @Id
-    @ManyToOne
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id", nullable = false)
-    private int id;
+    private Long id;
 
     @Column(name="name")
     private String name;
 
-    @Column(name ="second name")
+    @Column(name="second_name")
     private String secondName;
 
-    @Column(name = "birthday")
+    @Column(name="birthday")
     private String birthday;
 
-    @Column(name ="country")
+    @Column(name="country")
     private String country;
 
-    @Column(name = "email")
+    @Column(name="email")
     private String email;
 
-    @Column(name ="phone")
-    private int phone;
+    @Column(name="phone")
+    private String phone;
 
-    @Column(name = "password")
+    @Column(name="password")
     private String password;
+
+    @OneToMany(mappedBy="user")
+    private List<Homeowner> homeowner;
 }
