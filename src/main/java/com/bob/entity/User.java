@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="user")
+@Table(name="my_user")
 public class User {
 
     @Id
@@ -32,6 +32,6 @@ public class User {
     @Column(name="password")
     private String password;
 
-    @OneToMany(mappedBy="user")
+    @OneToMany(mappedBy="my_user")
     private List<Homeowner> homeowner;
 }
