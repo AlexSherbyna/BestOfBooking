@@ -34,4 +34,10 @@ public class User {
 
     @OneToMany(mappedBy="my_user")
     private List<Homeowner> homeowner;
+
+    @OneToMany(mappedBy="my_user")
+    private List<Transaction> transaction;
+
+    @OneToMany(mappedBy="my_user")
+    private List<Booking> booking;
 }
