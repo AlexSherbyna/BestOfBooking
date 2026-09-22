@@ -1,10 +1,13 @@
 package com.bob.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.List;
 
 @Entity
-@Table(name="my_user")
+@Table(name="upuser")
+@Data
 public class User {
 
     @Id
@@ -32,12 +35,12 @@ public class User {
     @Column(name="password")
     private String password;
 
-    @OneToMany(mappedBy="my_user")
+    @OneToMany(mappedBy="upuser")
     private List<Homeowner> homeowner;
 
-    @OneToMany(mappedBy="my_user")
+    @OneToMany(mappedBy="upuser")
     private List<Transaction> transaction;
 
-    @OneToMany(mappedBy="my_user")
+    @OneToMany(mappedBy="upuser")
     private List<Booking> booking;
 }

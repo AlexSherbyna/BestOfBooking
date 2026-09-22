@@ -31,10 +31,10 @@ public class Property {
     private Byte animals;
 
     @Column(name = "room_flor")
-    private Integer romFlor;
+    private Integer roomFlor;
 
     @Column(name = "room_number")
-    private Integer rumNumber;
+    private Integer roonNumber;
 
     @Column(name = "address")
     private String address;
