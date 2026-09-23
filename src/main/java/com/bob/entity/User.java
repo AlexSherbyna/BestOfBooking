@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 @Entity
-@Table(name="upuser")
+@Table(name="appUser")
 @Data
 public class User {
 
@@ -35,12 +35,12 @@ public class User {
     @Column(name="password")
     private String password;
 
-    @OneToMany(mappedBy="upuser")
+    @OneToMany(mappedBy="appUser")
     private List<Homeowner> homeowner;
 
-    @OneToMany(mappedBy="upuser")
+    @OneToMany(mappedBy="appUser")
     private List<Transaction> transaction;
 
-    @OneToMany(mappedBy="upuser")
+    @OneToMany(mappedBy="appUser")
     private List<Booking> booking;
 }

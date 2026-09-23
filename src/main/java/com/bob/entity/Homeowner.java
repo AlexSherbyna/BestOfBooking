@@ -16,7 +16,7 @@ public class Homeowner {
     private Integer propertiesID;
 
     @ManyToOne
-    @JoinColumn(name="upuser_id")
-    private User upuser;
+    @JoinColumn(name="appUser_id")
+    private User appUser;
 
 }

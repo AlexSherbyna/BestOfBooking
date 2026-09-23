@@ -23,8 +23,8 @@ public class Transaction {
     private Long bookingId;
 
     @ManyToOne
-    @JoinColumn(name="upuser_id")
-    private User upuser;
+    @JoinColumn(name="appUser_id")
+    private User appUser;
 
     @OneToOne(mappedBy="transaction")
     private Booking booking;

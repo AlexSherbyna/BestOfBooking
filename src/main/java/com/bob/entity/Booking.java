@@ -34,8 +34,8 @@ public class Booking {
     private LocalDate orderTime;
 
     @ManyToOne
-    @JoinColumn(name="upuser_id")
-    private User upuser;
+    @JoinColumn(name="appUser_id")
+    private User appUser;
 
     @OneToOne
     @JoinColumn(name="transaction")
