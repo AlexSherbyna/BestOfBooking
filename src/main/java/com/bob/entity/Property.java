@@ -33,7 +33,7 @@ public class Property {
     private Integer roomFlor;
 
     @Column(name = "room_number")
-    private Integer roonNumber;
+    private Integer roomNumber;
 
     @Column(name = "address")
     private String address;
