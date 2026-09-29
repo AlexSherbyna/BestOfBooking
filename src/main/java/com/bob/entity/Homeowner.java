@@ -2,6 +2,7 @@ package com.bob.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Table(name="homeowner")
@@ -17,6 +18,7 @@ public class Homeowner {
 
     @ManyToOne
     @JoinColumn(name="appUser_id")
+    @ToString.Exclude
     private User appUser;
 
 }

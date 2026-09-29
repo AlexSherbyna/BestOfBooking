@@ -2,6 +2,7 @@ package com.bob.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -27,10 +28,10 @@ public class Property {
     private String city;
 
     @Column(name = "animals")
-    private Byte animals;
+    private Boolean isAnimalsAllowed;
 
-    @Column(name = "room_flor")
-    private Integer roomFlor;
+    @Column(name = "room_floor")
+    private Integer roomFloor;
 
     @Column(name = "room_number")
     private Integer roonNumber;
@@ -38,7 +39,7 @@ public class Property {
     @Column(name = "address")
     private String address;
 
-    @OneToMany
-    @JoinColumn(name="booking")
+    @OneToMany(mappedBy = "property")
+    @ToString.Exclude
     private List<Booking> booking;
 }

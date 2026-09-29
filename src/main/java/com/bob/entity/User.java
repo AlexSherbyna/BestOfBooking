@@ -2,7 +2,9 @@ package com.bob.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -21,7 +23,7 @@ public class User {
     private String secondName;
 
     @Column(name="birthday")
-    private String birthday;
+    private LocalDate birthday;
 
     @Column(name="country")
     private String country;
@@ -36,11 +38,14 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy="appUser")
+    @ToString.Exclude
     private List<Homeowner> homeowner;
 
     @OneToMany(mappedBy="appUser")
+    @ToString.Exclude
     private List<Transaction> transaction;
 
     @OneToMany(mappedBy="appUser")
+    @ToString.Exclude
     private List<Booking> booking;
 }
