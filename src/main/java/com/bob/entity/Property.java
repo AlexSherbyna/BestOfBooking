@@ -39,6 +39,11 @@ public class Property {
     @Column(name = "address")
     private String address;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id")
+    @ToString.Exclude
+    private User owner;
+
     @OneToMany(mappedBy = "property")
     @ToString.Exclude
     private List<Booking> booking;

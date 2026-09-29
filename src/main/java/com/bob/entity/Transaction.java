@@ -14,11 +14,15 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="sender_id")
-    private Long senderId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sender_id")
+    @ToString.Exclude
+    private User sender;
 
-    @Column(name="receiver_id")
-    private Long receiverId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "receiver_id")
+    @ToString.Exclude
+    private User receiver;
 
     @Column(name="booking")
     private Long bookingId;

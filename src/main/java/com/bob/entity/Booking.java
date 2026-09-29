@@ -35,7 +35,7 @@ public class Booking {
     private LocalDate orderTime;
 
     @ManyToOne
-    @JoinColumn(name="appUser_id")
+    @JoinColumn(name="app_user_id")
     @ToString.Exclude
     private User appUser;
 
