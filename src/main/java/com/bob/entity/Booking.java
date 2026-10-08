@@ -20,6 +20,7 @@ public class Booking {
     private String comment;
 
     @Column(name = "booking_status")
+    @Enumerated(EnumType.STRING)
     private BookingStatus bookingStatus;
 
     @Column(name = "price")

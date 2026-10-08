@@ -24,11 +24,8 @@ public class Transaction {
     @ToString.Exclude
     private User receiver;
 
-    @Column(name="booking")
-    private Long bookingId;
-
     @ManyToOne
-    @JoinColumn(name="appUser_id")
+    @JoinColumn(name="app_user_id")
     @ToString.Exclude
     private User appUser;
 

@@ -37,9 +37,9 @@ public class User {
     @Column(name="password")
     private String password;
 
-    @OneToMany(mappedBy="appUser")
+    @OneToMany(mappedBy="owner")
     @ToString.Exclude
-    private List<Homeowner> homeowner;
+    private List<Property> properties;
 
     @OneToMany(mappedBy="appUser")
     @ToString.Exclude
