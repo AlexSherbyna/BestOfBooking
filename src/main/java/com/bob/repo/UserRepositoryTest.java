@@ -18,7 +18,7 @@ public class UserRepositoryTest {
     public void testSaveUser() {
 
         User user = new User();
-        user.setName("Test User");
+        user.setName("Test name");
 
         User savedUser = userRepository.save(user);
 
